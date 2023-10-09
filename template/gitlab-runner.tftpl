@@ -19,7 +19,7 @@ ${runners_userdata}
 EOF
 
 chmod u+x /etc/gitlab-runner/runners_userdata.sh
-
+bash /etc/gitlab-runner/runners_userdata.sh
 sed -i.bak s/__PARENT_TAG__/$PARENT_TAG/g /etc/gitlab-runner/config.toml
 
 ${pre_install_certificates}
